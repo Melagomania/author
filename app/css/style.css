@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Lobster";
+  src: url("../fonts/Lobster/Lobster.eot");
+  src: url("../fonts/Lobster/Lobster.ttf");
+  src: url("../fonts/Lobster/Lobster.woff");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans/OpenSansRegular.woff");
+  src: url("../fonts/OpenSans/OpenSansRegular.eot");
+  src: url("../fonts/OpenSans/OpenSansRegular.ttf");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Open Sans Semibold";
+  src: url("../fonts/OpenSans/OpenSansSemibold/OpenSans-Semibold.woff");
+  src: url("../fonts/OpenSans/OpenSansSemibold/OpenSans-Semibold.eot");
+  src: url("../fonts/OpenSans/OpenSansSemibold/OpenSans-Semibold.ttf");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/Myriad Pro/MYRIADPROREGULAR.woff");
+  src: url("../fonts/Myriad Pro/MYRIADPROREGULAR.eot");
+  src: url("../fonts/Myriad Pro/MYRIADPROREGULAR.ttf");
+  font-style: normal;
+  font-weight: normal; }
+
+.topline {
+  max-width: 1170px;
+  margin: 0 auto; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  max-width: 1440px;
+  font-family: "Open Sans";
+  color: #4e525d; }
+
+.topline {
+  overflow: hidden; }
+  .topline h1 {
+    float: left;
+    padding: 27px 0;
+    font-family: "Lobster";
+    font-weight: normal;
+    font-size: 43px;
+    line-height: 43px; }
+    .topline h1 a {
+      color: #44c0c2;
+      text-decoration: none; }
+  .topline .main-navigation {
+    float: right;
+    font-size: 0; }
+    .topline .main-navigation li {
+      display: inline-block; }
+      .topline .main-navigation li a {
+        display: inline-block;
+        padding: 38px 20px;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: normal;
+        text-decoration: none;
+        color: #484c55; }
+      .topline .main-navigation li.active, .topline .main-navigation li:hover {
+        background-color: #f8f9fb;
+        border-bottom: 3px solid #49cbcd; }
+        .topline .main-navigation li.active a, .topline .main-navigation li:hover a {
+          color: #49cbcd; }
+
+.slider {
+  position: relative; }
+  .slider .slide {
+    position: relative;
+    text-align: center; }
+    .slider .slide img {
+      max-width: 1440px;
+      width: 100%; }
+    .slider .slide .text {
+      position: absolute;
+      top: 21%;
+      color: white;
+      font-size: 23px;
+      width: 100%; }
+      .slider .slide .text h2 {
+        margin-bottom: 15px;
+        font-size: 63px;
+        font-family: "Open Sans Semibold";
+        text-shadow: 0 1px 1px #a0a0a0; }
+      .slider .slide .text p {
+        margin-bottom: 53px; }
+      .slider .slide .text button {
+        padding: 18px 35px;
+        font-family: "Open Sans Semibold";
+        font-size: 26px;
+        line-height: 26px;
+        color: #fff;
+        background-color: transparent;
+        border: 3px solid #fff;
+        -webkit-border-radius: 6px;
+                border-radius: 6px; }
+  .slider .slider-nav {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 51px;
+    height: 51px;
+    background: transparent;
+    background-image: url("../img/banner_btns.png");
+    border: none;
+    margin: 0; }
+    .slider .slider-nav.left {
+      left: 2%; }
+    .slider .slider-nav.right {
+      right: 2%;
+      background-position: 51px; }

@@ -1,0 +1,92 @@
+@import "fonts", "colors", "placeholders"
+
+*
+  margin: 0
+  padding: 0
+
+body
+  max-width: 1440px
+  font-family: "Open Sans"
+  color: $font-color
+
+.topline
+  @extend %container
+  overflow: hidden
+
+  h1
+    float: left
+    padding: 27px 0
+    font-family: "Lobster"
+    font-weight: normal
+    font-size: 43px
+    line-height: 43px
+    a
+      color: $main-logo-color
+      text-decoration: none
+
+  .main-navigation
+    float: right
+    font-size: 0
+
+    li
+      display: inline-block
+      a
+        display: inline-block
+        padding: 38px 20px
+        font-size: 15px
+        line-height: 24px
+        font-weight: normal
+        text-decoration: none
+        color: $topline-nav-color
+      &.active, &:hover
+        background-color: #f8f9fb
+        border-bottom: 3px solid $main-color
+        a
+          color: $main-color
+
+.slider
+  position: relative
+  .slide
+    position: relative
+    text-align: center
+    img
+      max-width: 1440px
+      width: 100%
+    .text
+      position: absolute
+      top: 21%
+      // transform: translate(0, -50%)
+      color: white
+      font-size: 23px
+      width: 100%
+      h2
+        margin-bottom: 15px
+        font-size: 63px
+        font-family: "Open Sans Semibold"
+        text-shadow: 0 1px 1px #a0a0a0
+      p
+        margin-bottom: 53px
+      button
+        padding: 18px 35px
+        font-family: "Open Sans Semibold"
+        font-size: 26px
+        line-height: 26px
+        color: #fff
+        background-color: transparent
+        border: 3px solid #fff
+        border-radius: 6px
+  .slider-nav
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    width: 51px
+    height: 51px
+    background: transparent
+    background-image: url("../img/banner_btns.png")
+    border: none
+    margin: 0
+    &.left
+      left: 2%
+    &.right
+      right: 2%
+      background-position: 51px
