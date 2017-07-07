@@ -1,22 +1,25 @@
 %container
     max-width: 1170px
     margin: 0 auto
+
 %cross
   &::before
-    content: ""
+    content: "+"
     position: absolute
     top: 50%
+    left: 50%
     transform: translate(-50%, -50%)
-    left: center
-    width: 42px
-    height: 11px
-    background-color: $photo-cross-color
-  &::after
-    content: ""
-    position: absolute
-    top: 50%
-    left: center
-    transform: translate(-50%, -50%)
-    width: 11px
-    height: 42px
-    background-color: $photo-cross-color
+    font-size: 85px
+    font-weight: 700
+    color: $photo-cross-color
+%owl-base
+  position: absolute
+  top: 55%
+  display: block
+  height: 52px
+  background-image: url("../img/banner_btns.png")
+  background-repeat: no-repeat
+  width: 51px
+  transform: translate(0px, -50%)
+  &:hover
+    opacity: 0.7
