@@ -1,3 +1,22 @@
 %container
     max-width: 1170px
     margin: 0 auto
+%cross
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    left: center
+    width: 42px
+    height: 11px
+    background-color: $photo-cross-color
+  &::after
+    content: ""
+    position: absolute
+    top: 50%
+    left: center
+    transform: translate(-50%, -50%)
+    width: 11px
+    height: 42px
+    background-color: $photo-cross-color
