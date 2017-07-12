@@ -32,6 +32,7 @@
 
 .topline, .team, .price .content, footer .container {
   max-width: 1170px;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden; }
 
@@ -66,7 +67,6 @@
   padding: 0; }
 
 body {
-  max-width: 1440px;
   font-family: "Open Sans";
   font-size: 14px;
   text-align: center;
@@ -188,7 +188,7 @@ body {
   font-size: 0;
   padding: 109px 0;
   background-color: #f1f1f1; }
-  .price .card {
+  .price .content .card {
     position: relative;
     margin-right: 30px;
     padding-bottom: 70px;
@@ -198,16 +198,16 @@ body {
     max-width: 370px;
     width: 100%;
     background-color: #f8f9fb; }
-    .price .card:last-child {
+    .price .content .card:last-child {
       margin-right: 0; }
-    .price .card h3 {
+    .price .content .card h3 {
       padding: 28px 0;
       font-size: 26px;
       line-height: 20px;
       font-weight: normal;
       color: white;
       background-color: #495261; }
-    .price .card span {
+    .price .content .card span {
       display: block;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
@@ -215,19 +215,19 @@ body {
       line-height: 16px;
       padding: 27px 0;
       color: #485460; }
-    .price .card ul {
+    .price .content .card ul {
       list-style: none;
       background-color: #fff;
       margin-bottom: 30px; }
-      .price .card ul li {
+      .price .content .card ul li {
         padding: 11px 0;
         font-size: 14px;
         line-height: 24px;
         border-bottom: 1px solid #ecf0f1;
         color: #8c9299; }
-        .price .card ul li:first-child {
+        .price .content .card ul li:first-child {
           border-top: 1px solid #ecf0f1; }
-    .price .card button {
+    .price .content .card button {
       position: absolute;
       bottom: 0px;
       left: 50%;
@@ -245,13 +245,15 @@ body {
       border: none;
       -webkit-border-radius: 3px;
               border-radius: 3px; }
-      .price .card button:hover + h3, .price .card button:hover {
+      .price .content .card button:hover + h3, .price .content .card button:hover {
         background-color: #49cbcd; }
 
 footer {
   padding: 95px 0 100px 0;
   text-align: left;
-  background-image: url("../img/footer.jpg"); }
+  background-image: url("../img/footer.jpg");
+  background-origin: border-box;
+  background-size: cover; }
   footer h2 {
     margin-bottom: 100px;
     font-size: 42px;
@@ -291,6 +293,9 @@ footer {
       line-height: 24px;
       color: #bface2;
       font-family: 'Myriad Pro'; }
+      footer .get-in-touch span a {
+        text-decoration: none;
+        color: #bface2; }
   footer .forms {
     width: 48%;
     float: right; }

@@ -1,11 +1,10 @@
-@import "fonts", "colors", "placeholders"
+@import "fonts", "colors", "placeholders", "media"
 
 *
   margin: 0
   padding: 0
 
 body
-  max-width: 1440px
   font-family: "Open Sans"
   font-size: 14px
   text-align: center
@@ -45,6 +44,7 @@ body
           color: $main-color
 
 .slider
+
   .slide
     position: relative
     img
@@ -131,65 +131,67 @@ body
   background-color: $price-bg-color
   .content
     @extend %container
-  .card
-    position: relative
-    margin-right: 30px
-    padding-bottom: 70px
-    display: inline-block
-    box-sizing: border-box
-    max-width: 370px
-    width: 100%
-    background-color: $card-bg-color
-    &:last-child
-      margin-right: 0
-    h3
-      padding: 28px 0
-      font-size: 26px
-      line-height: 20px
-      font-weight: normal
-      color: white
-      background-color: $card-h3-color
-    span
-      display: block
+    .card
+      position: relative
+      margin-right: 30px
+      padding-bottom: 70px
+      display: inline-block
       box-sizing: border-box
-      font-size: 20px
-      line-height: 16px
-      padding: 27px 0
-      color: $subscription-cash-color
-    ul
-      list-style: none
-      background-color: #fff
-      margin-bottom: 30px
-      li
-        padding: 11px 0
-        font-size: 14px
+      max-width: 370px
+      width: 100%
+      background-color: $card-bg-color
+      &:last-child
+        margin-right: 0
+      h3
+        padding: 28px 0
+        font-size: 26px
+        line-height: 20px
+        font-weight: normal
+        color: white
+        background-color: $card-h3-color
+      span
+        display: block
+        box-sizing: border-box
+        font-size: 20px
+        line-height: 16px
+        padding: 27px 0
+        color: $subscription-cash-color
+      ul
+        list-style: none
+        background-color: #fff
+        margin-bottom: 30px
+        li
+          padding: 11px 0
+          font-size: 14px
+          line-height: 24px
+          border-bottom: 1px solid $card-border-color
+          color: $subscription-main-color
+          &:first-child
+            border-top: 1px solid $card-border-color
+      button
+        position: absolute
+        bottom: 0px
+        left: 50%
+        transform: translate(-50%, 0)
+        margin-bottom: 30px
+        padding: 8px 50px
+        font-size: 17px
         line-height: 24px
-        border-bottom: 1px solid $card-border-color
-        color: $subscription-main-color
-        &:first-child
-          border-top: 1px solid $card-border-color
-    button
-      position: absolute
-      bottom: 0px
-      left: 50%
-      transform: translate(-50%, 0)
-      margin-bottom: 30px
-      padding: 8px 50px
-      font-size: 17px
-      line-height: 24px
-      font-weight: 600
-      font-family: "Open Sans"
-      color: #fff
-      background-color: $card-button-color
-      border: none
-      border-radius: 3px
-      &:hover + h3, &:hover
-        background-color: $main-color
+        font-weight: 600
+        font-family: "Open Sans"
+        color: #fff
+        background-color: $card-button-color
+        border: none
+        border-radius: 3px
+        &:hover + h3, &:hover
+          background-color: $main-color
 
 footer
   padding: 95px 0 100px 0
   text-align: left
   background-image: url("../img/footer.jpg")
+  background-origin: border-box
+  background-size: cover
   .container
     @extend %container
   h2
@@ -230,6 +232,9 @@ footer
       line-height: 24px
       color: $footer-color-contacts
       font-family: 'Myriad Pro'
+      a
+        text-decoration: none
+        color: $footer-color-contacts
   .forms
     width: 48%
     float: right
