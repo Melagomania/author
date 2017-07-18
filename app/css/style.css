@@ -124,7 +124,7 @@ body {
     .slider .slide .text p {
       margin: 0 auto;
       margin-bottom: 53px;
-      min-width: 400px; }
+      max-width: 400px; }
     .slider .slide .text button {
       padding: 18px 35px;
       font-family: "Open Sans Semibold";
