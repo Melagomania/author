@@ -383,5 +383,8 @@ footer {
           display: block; }
           .topline nav ul li a {
             padding: 10px 20px; }
-          .topline nav ul li.active {
-            border: none; } }
+          .topline nav ul li.active, .topline nav ul li:hover {
+            border: none; }
+          .topline nav ul li:active {
+            border-bottom: 3px solid #49cbcd;
+            background-color: #f3f4f6; } }
