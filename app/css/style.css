@@ -66,6 +66,9 @@
   margin: 0;
   padding: 0; }
 
+.visible {
+  display: block; }
+
 body {
   font-family: "Open Sans";
   font-size: 14px;
@@ -91,6 +94,9 @@ body {
         display: inline-block;
         float: left; }
         .topline nav ul li a {
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          width: 100%;
           display: inline-block;
           padding: 38px 20px;
           font-size: 15px;
@@ -103,12 +109,27 @@ body {
           border-bottom: 3px solid #49cbcd; }
           .topline nav ul li.active a, .topline nav ul li:hover a {
             color: #49cbcd; }
+    .topline nav .toggle-menu {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 20px; }
+      .topline nav .toggle-menu div {
+        width: 33px;
+        height: 4px;
+        margin-bottom: 4px;
+        -webkit-border-radius: 2px;
+                border-radius: 2px;
+        background-color: #49cbcd; }
+        .topline nav .toggle-menu div:last-child {
+          margin-bottom: 0; }
 
 .slider .slide {
   position: relative; }
   .slider .slide img {
     display: block;
-    width: 100%; }
+    width: 100%;
+    min-height: 220px; }
   .slider .slide .text {
     position: absolute;
     top: 50%;
@@ -341,3 +362,26 @@ footer {
       border: none;
       -webkit-border-radius: 3px;
               border-radius: 3px; }
+
+@media only screen and (max-width: 1190px) {
+  .topline h1 {
+    margin-left: 20px; } }
+
+@media only screen and (max-width: 700px) {
+  .topline {
+    position: relative; }
+    .topline nav {
+      float: none; }
+      .topline nav .toggle-menu {
+        display: block; }
+      .topline nav ul {
+        background-color: #f8f9fb;
+        width: 100%;
+        display: none; }
+        .topline nav ul li {
+          float: none;
+          display: block; }
+          .topline nav ul li a {
+            padding: 10px 20px; }
+          .topline nav ul li.active {
+            border: none; } }

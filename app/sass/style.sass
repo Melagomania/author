@@ -4,6 +4,8 @@
   margin: 0
   padding: 0
 
+.visible
+  display: block
 body
   font-family: "Open Sans"
   font-size: 14px
@@ -32,6 +34,8 @@ body
         display: inline-block
         float: left
         a
+          box-sizing: border-box
+          width: 100%
           display: inline-block
           padding: 38px 20px
           font-size: 15px
@@ -40,10 +44,24 @@ body
           text-decoration: none
           color: $topline-nav-color
         &.active, &:hover
-          background-color: #f8f9fb
+          background-color: $card-bg-color
           border-bottom: 3px solid $main-color
           a
             color: $main-color
+    .toggle-menu
+      display: none
+      position: absolute
+      top: 40px
+      right: 20px
+      div
+        width: 33px
+        height: 4px
+        margin-bottom: 4px
+        border-radius: 2px
+        background-color: $main-color
+        &:last-child
+          margin-bottom: 0
+
 
 .slider
 
@@ -52,6 +70,7 @@ body
     img
       display: block
       width: 100%
+      min-height: 220px
     .text
       position: absolute
       top: 50%
@@ -278,4 +297,4 @@ footer
       border-radius: 3px
 
 
-@import "media"
+@import "_media"

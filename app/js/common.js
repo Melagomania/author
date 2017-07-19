@@ -12,4 +12,10 @@ $(document).ready(function() {
 	  dotsSpeed : 800,
 	  dragEndSpeed : 800
 	 });
+
+	 var $menu_button = $(".toggle-menu");
+	 var $menu = $("nav ul");
+	 $menu_button.click(function () {
+	 	$menu.slideToggle("slow");
+	});
 });
