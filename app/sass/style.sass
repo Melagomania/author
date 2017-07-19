@@ -24,24 +24,26 @@ body
       color: $main-logo-color
       text-decoration: none
 
-  .main-navigation
+  nav
     float: right
-    li
-      display: inline-block
-      float: left
-      a
+    ul
+      overflow: hidden
+      li
         display: inline-block
-        padding: 38px 20px
-        font-size: 15px
-        line-height: 24px
-        font-weight: normal
-        text-decoration: none
-        color: $topline-nav-color
-      &.active, &:hover
-        background-color: #f8f9fb
-        border-bottom: 3px solid $main-color
+        float: left
         a
-          color: $main-color
+          display: inline-block
+          padding: 38px 20px
+          font-size: 15px
+          line-height: 24px
+          font-weight: normal
+          text-decoration: none
+          color: $topline-nav-color
+        &.active, &:hover
+          background-color: #f8f9fb
+          border-bottom: 3px solid $main-color
+          a
+            color: $main-color
 
 .slider
 

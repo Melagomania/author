@@ -83,24 +83,26 @@ body {
     .topline h1 a {
       color: #44c0c2;
       text-decoration: none; }
-  .topline .main-navigation {
+  .topline nav {
     float: right; }
-    .topline .main-navigation li {
-      display: inline-block;
-      float: left; }
-      .topline .main-navigation li a {
+    .topline nav ul {
+      overflow: hidden; }
+      .topline nav ul li {
         display: inline-block;
-        padding: 38px 20px;
-        font-size: 15px;
-        line-height: 24px;
-        font-weight: normal;
-        text-decoration: none;
-        color: #484c55; }
-      .topline .main-navigation li.active, .topline .main-navigation li:hover {
-        background-color: #f8f9fb;
-        border-bottom: 3px solid #49cbcd; }
-        .topline .main-navigation li.active a, .topline .main-navigation li:hover a {
-          color: #49cbcd; }
+        float: left; }
+        .topline nav ul li a {
+          display: inline-block;
+          padding: 38px 20px;
+          font-size: 15px;
+          line-height: 24px;
+          font-weight: normal;
+          text-decoration: none;
+          color: #484c55; }
+        .topline nav ul li.active, .topline nav ul li:hover {
+          background-color: #f8f9fb;
+          border-bottom: 3px solid #49cbcd; }
+          .topline nav ul li.active a, .topline nav ul li:hover a {
+            color: #49cbcd; }
 
 .slider .slide {
   position: relative; }
