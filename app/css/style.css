@@ -109,7 +109,8 @@ body {
       overflow: hidden; }
       .topline nav ul li {
         display: inline-block;
-        float: left; }
+        float: left;
+        border-bottom: 3px solid transparent; }
         .topline nav ul li a {
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
@@ -117,7 +118,7 @@ body {
           display: inline-block;
           padding: 38px 20px;
           font-size: 15px;
-          line-height: 24px;
+          line-height: 21px;
           font-weight: normal;
           text-decoration: none;
           color: #484c55; }
@@ -156,7 +157,7 @@ body {
                 transform: rotate(-45deg) translate(6px, -7px); }
 
 .slider {
-  margin-top: 103px; }
+  margin-top: 100px; }
   .slider .slide {
     position: relative; }
     .slider .slide img {
@@ -389,7 +390,9 @@ footer {
       color: #fff;
       font-size: 22px;
       line-height: 24px;
-      padding: 13px 60px;
+      padding: 13px 0;
+      max-width: 180px;
+      width: 100%;
       font-family: "Open Sans";
       border: none;
       -webkit-border-radius: 3px;
@@ -417,13 +420,33 @@ footer {
     margin-top: 60px; }
     .slider .slide .text {
       font-size: 13px; }
+    .slider .owl-prev, .slider .owl-next {
+      display: none !important; }
   .price {
     padding-bottom: 50px; }
     .price .content .card {
       display: block;
       width: 100%;
-      margin: 0 auto 60px; } }
+      margin: 0 auto 60px; }
+  footer .forms {
+    float: none;
+    width: 90%;
+    margin: 0 auto 70px; }
+    footer .forms button {
+      float: none;
+      max-width: 100%;
+      width: 100%; }
+  footer .get-in-touch {
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%; } }
 
 @media only screen and (max-width: 480px) {
+  .slider .slide .text {
+    font-size: 12px; }
+    .slider .slide .text h2 {
+      font-size: 2.1em;
+      margin-bottom: 0.6em; }
   .team ul li {
     width: 100%; } }

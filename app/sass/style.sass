@@ -41,13 +41,14 @@ body
       li
         display: inline-block
         float: left
+        border-bottom: 3px solid transparent
         a
           box-sizing: border-box
           width: 100%
           display: inline-block
           padding: 38px 20px
           font-size: 15px
-          line-height: 24px
+          line-height: 21px
           font-weight: normal
           text-decoration: none
           color: $topline-nav-color
@@ -84,7 +85,7 @@ body
       &:after
         transform: rotate(-45deg) translate(6px, -7px)
 .slider
-  margin-top: 103px
+  margin-top: 100px
   .slide
     position: relative
     img
@@ -314,7 +315,9 @@ footer
       color: #fff
       font-size: 22px
       line-height: 24px
-      padding: 13px 60px
+      padding: 13px 0
+      max-width: 180px
+      width: 100%
       font-family: "Open Sans"
       border: none
       border-radius: 3px
