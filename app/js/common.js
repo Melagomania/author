@@ -13,9 +13,11 @@ $(document).ready(function() {
 	  dragEndSpeed : 800
 	 });
 
-	 var $menu_button = $(".toggle-menu");
-	 var $menu = $("nav ul");
-	 $menu_button.click(function () {
-	 	$menu.slideToggle("slow");
+	$(".toggle-menu").click(function () {
+		$(this).toggleClass("on");
+		$("nav").slideToggle("slow");
 	});
+
+	
+
 });

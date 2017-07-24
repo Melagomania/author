@@ -30,11 +30,13 @@
   font-style: normal;
   font-weight: normal; }
 
-.topline, .team, .price .content, footer .container {
+.content, .price .content, footer .container {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 .team ul li .team-photo:hover::before {
   content: "+";
@@ -62,12 +64,20 @@
   .slider .owl-prev:hover, .slider .owl-next:hover {
     opacity: 0.7; }
 
+.topline .toggle-menu span, .topline .toggle-menu span::after, .topline .toggle-menu span::before {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #44c0c2;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
 * {
   margin: 0;
   padding: 0; }
-
-.visible {
-  display: block; }
 
 body {
   font-family: "Open Sans";
@@ -76,8 +86,15 @@ body {
   color: #4e525d; }
 
 .topline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.9);
   overflow: hidden; }
   .topline h1 {
+    margin-left: 10px;
     float: left;
     font-family: "Lobster";
     font-weight: normal;
@@ -109,66 +126,77 @@ body {
           border-bottom: 3px solid #49cbcd; }
           .topline nav ul li.active a, .topline nav ul li:hover a {
             color: #49cbcd; }
-    .topline nav .toggle-menu {
-      display: none;
+  .topline .toggle-menu {
+    display: none;
+    position: absolute;
+    top: 21px;
+    right: 10px;
+    cursor: pointer;
+    width: 28px;
+    height: 21px; }
+    .topline .toggle-menu span {
+      position: relative; }
+      .topline .toggle-menu span::after, .topline .toggle-menu span::before {
+        position: absolute;
+        content: "";
+        display: block; }
+      .topline .toggle-menu span::after {
+        top: 18px; }
+      .topline .toggle-menu span::before {
+        top: 9px; }
+    .topline .toggle-menu.on span {
+      background-color: transparent; }
+      .topline .toggle-menu.on span:before {
+        -webkit-transform: rotate(45deg) translate(-1px, 0px);
+            -ms-transform: rotate(45deg) translate(-1px, 0px);
+                transform: rotate(45deg) translate(-1px, 0px); }
+      .topline .toggle-menu.on span:after {
+        -webkit-transform: rotate(-45deg) translate(6px, -7px);
+            -ms-transform: rotate(-45deg) translate(6px, -7px);
+                transform: rotate(-45deg) translate(6px, -7px); }
+
+.slider {
+  margin-top: 103px; }
+  .slider .slide {
+    position: relative; }
+    .slider .slide img {
+      display: block;
+      width: 100%;
+      min-height: 220px; }
+    .slider .slide .text {
       position: absolute;
       top: 50%;
       -webkit-transform: translate(0, -50%);
           -ms-transform: translate(0, -50%);
               transform: translate(0, -50%);
-      right: 20px; }
-      .topline nav .toggle-menu div {
-        width: 33px;
-        height: 4px;
-        margin-bottom: 4px;
-        -webkit-border-radius: 2px;
-                border-radius: 2px;
-        background-color: #49cbcd; }
-        .topline nav .toggle-menu div:last-child {
-          margin-bottom: 0; }
-
-.slider .slide {
-  position: relative; }
-  .slider .slide img {
-    display: block;
-    width: 100%;
-    min-height: 220px; }
-  .slider .slide .text {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    color: white;
-    font-size: 23px;
-    width: 100%; }
-    .slider .slide .text h2 {
-      margin-bottom: 0.24em;
-      font-size: 2.7em;
-      font-family: "Open Sans Semibold";
-      text-shadow: 0.1px 1px 0 rgba(0, 0, 0, 0.16); }
-    .slider .slide .text p {
-      margin: 0 auto;
-      margin-bottom: 2.3em;
-      max-width: 400px; }
-    .slider .slide .text button {
-      padding: 0.8em 35px;
-      font-family: "Open Sans Semibold";
-      font-size: 1em;
-      line-height: 1em;
-      color: #fff;
-      background-color: transparent;
-      border: 3px solid #fff;
-      -webkit-border-radius: 6px;
-              border-radius: 6px;
-      cursor: pointer; }
-
-.slider .owl-prev {
-  left: 3%; }
-
-.slider .owl-next {
-  right: 3%;
-  background-position: 100% 0; }
+      color: white;
+      font-size: 23px;
+      width: 100%; }
+      .slider .slide .text h2 {
+        margin-bottom: 0.24em;
+        font-size: 2.7em;
+        font-family: "Open Sans Semibold";
+        text-shadow: 0.1px 1px 0 rgba(0, 0, 0, 0.16); }
+      .slider .slide .text p {
+        margin: 0 auto;
+        margin-bottom: 2.3em;
+        max-width: 400px; }
+      .slider .slide .text button {
+        padding: 0.8em 35px;
+        font-family: "Open Sans Semibold";
+        font-size: 1em;
+        line-height: 1em;
+        color: #fff;
+        background-color: transparent;
+        border: 3px solid #fff;
+        -webkit-border-radius: 6px;
+                border-radius: 6px;
+        cursor: pointer; }
+  .slider .owl-prev {
+    left: 3%; }
+  .slider .owl-next {
+    right: 3%;
+    background-position: 100% 0; }
 
 .team h2 {
   margin: 95px 0 100px 0;
@@ -177,7 +205,7 @@ body {
   font-weight: normal; }
 
 .team ul {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   font-size: 0;
   text-align: center; }
   .team ul li {
@@ -185,13 +213,10 @@ body {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     display: inline-block;
-    max-width: 292px;
-    padding: 0 21px;
-    vertical-align: top; }
-    .team ul li:first-child {
-      padding-left: 10px; }
-    .team ul li:last-child {
-      padding-right: 10px; }
+    width: 25%;
+    padding: 0 18px;
+    vertical-align: top;
+    margin-bottom: 50px; }
     .team ul li .team-photo {
       position: relative;
       margin: 0 auto 70px;
@@ -213,19 +238,18 @@ body {
 .price {
   font-size: 0;
   padding: 109px 0;
+  text-align: center;
   background-color: #f1f1f1; }
   .price .content .card {
     position: relative;
-    margin-right: 30px;
+    margin: 0 10px;
     padding-bottom: 70px;
     display: inline-block;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     max-width: 370px;
-    width: 100%;
+    width: 30%;
     background-color: #f8f9fb; }
-    .price .content .card:last-child {
-      margin-right: 0; }
     .price .content .card h3 {
       padding: 28px 0;
       font-size: 26px;
@@ -255,13 +279,16 @@ body {
           border-top: 1px solid #ecf0f1; }
     .price .content .card button {
       position: absolute;
-      bottom: 0px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      max-width: 168px;
+      width: 100%;
+      bottom: 30px;
       left: 50%;
       -webkit-transform: translate(-50%, 0);
           -ms-transform: translate(-50%, 0);
               transform: translate(-50%, 0);
-      margin-bottom: 30px;
-      padding: 8px 50px;
+      padding: 8px 0;
       font-size: 17px;
       line-height: 24px;
       font-weight: 600;
@@ -287,6 +314,7 @@ footer {
     color: #fff;
     text-align: center; }
   footer .get-in-touch {
+    margin-left: 10px;
     float: left;
     width: 40%; }
     footer .get-in-touch h3 {
@@ -324,7 +352,8 @@ footer {
         color: #bface2; }
   footer .forms {
     width: 48%;
-    float: right; }
+    float: right;
+    margin-right: 10px; }
     footer .forms input {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
@@ -366,28 +395,35 @@ footer {
       -webkit-border-radius: 3px;
               border-radius: 3px; }
 
-@media only screen and (max-width: 1190px) {
-  .topline h1 {
-    margin-left: 20px; } }
+@media only screen and (max-width: 992px) {
+  .team ul li {
+    width: 47%; } }
 
-@media only screen and (max-width: 700px) {
-  .topline {
-    position: relative; }
-    .topline nav {
-      float: none; }
-      .topline nav .toggle-menu {
-        display: block; }
-      .topline nav ul {
-        background-color: #f8f9fb;
-        width: 100%;
-        display: none; }
-        .topline nav ul li {
-          float: none;
-          display: block; }
-          .topline nav ul li a {
-            padding: 10px 20px; }
-          .topline nav ul li.active, .topline nav ul li:hover {
-            border: none; }
-          .topline nav ul li:active {
-            border-bottom: 3px solid #49cbcd;
-            background-color: #f3f4f6; } }
+@media only screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 30px;
+    line-height: 60px; }
+  .header nav {
+    display: none;
+    width: 100%; }
+    .header nav ul li {
+      display: block;
+      width: 100%; }
+      .header nav ul li a {
+        padding: 10px 40px; }
+  .header .toggle-menu {
+    display: block; }
+  .slider {
+    margin-top: 60px; }
+    .slider .slide .text {
+      font-size: 13px; }
+  .price {
+    padding-bottom: 50px; }
+    .price .content .card {
+      display: block;
+      width: 100%;
+      margin: 0 auto 60px; } }
+
+@media only screen and (max-width: 480px) {
+  .team ul li {
+    width: 100%; } }

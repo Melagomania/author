@@ -1,25 +1,40 @@
-@media only screen and (max-width: 1190px)
-  .topline h1
-    margin-left: 20px
+@media only screen and (max-width: 992px)
+  .team
+    ul
+      li
+        width: 47%
 
-@media only screen and (max-width: 700px)
-  .topline
-    position: relative
+@media only screen and (max-width: 768px)
+  .header
+    h1
+      font-size: 30px
+      line-height: 60px
     nav
-      float: none
-      .toggle-menu
+      display: none
+      width: 100%
+      ul li
         display: block
-      ul
-        background-color: $card-bg-color
         width: 100%
-        display: none
-        li
-          float: none
-          display: block
-          a
-            padding: 10px 20px
-          &.active, &:hover
-            border: none
-          &:active
-            border-bottom: 3px solid $main-color
-            background-color: #f3f4f6
+        a
+          padding: 10px 40px
+    .toggle-menu
+      display: block
+  .slider
+    margin-top: 60px
+    .slide
+      .text
+        font-size: 13px
+  .price
+    padding-bottom: 50px
+    .content
+      .card
+        display: block
+        width: 100%
+        margin: 0 auto 60px
+
+
+@media only screen and (max-width: 480px)
+  .team
+    ul
+      li
+        width: 100%

@@ -4,8 +4,9 @@
   margin: 0
   padding: 0
 
-.visible
-  display: block
+.content
+  @extend %container
+
 body
   font-family: "Open Sans"
   font-size: 14px
@@ -13,10 +14,16 @@ body
   color: $font-color
 
 .topline
-  @extend %container
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 999
+  background-color: rgba(255, 255, 255, 0.9)
   overflow: hidden
 
   h1
+    margin-left: 10px
     float: left
     font-family: "Lobster"
     font-weight: normal
@@ -49,24 +56,35 @@ body
           border-bottom: 3px solid $main-color
           a
             color: $main-color
-    .toggle-menu
-      display: none
-      position: absolute
-      top: 50%
-      transform: translate(0, -50%)
-      right: 20px
-      div
-        width: 33px
-        height: 4px
-        margin-bottom: 4px
-        border-radius: 2px
-        background-color: $main-color
-        &:last-child
-          margin-bottom: 0
 
-
+  .toggle-menu
+    display: none
+    position: absolute
+    top: 21px
+    right: 10px
+    cursor: pointer
+    width: 28px
+    height: 21px
+    span
+      position: relative
+      @extend %span-base
+      &::after, &::before
+        @extend %span-base
+        position: absolute
+        content: ""
+        display: block
+      &::after
+        top: 18px
+      &::before
+        top: 9px
+    &.on span
+      background-color: transparent
+      &:before
+        transform: rotate(45deg) translate(-1px, 0px)
+      &:after
+        transform: rotate(-45deg) translate(6px, -7px)
 .slider
-
+  margin-top: 103px
   .slide
     position: relative
     img
@@ -108,27 +126,23 @@ body
    background-position: 100% 0
 
 .team
-  @extend %container
   h2
     margin: 95px 0 100px 0
     font-size: 42px
     line-height: 42px
     font-weight: normal
   ul
-    margin-bottom: 100px
+    margin-bottom: 50px
     font-size: 0
     text-align: center
     li
       font-size: 14px
       box-sizing: border-box
       display: inline-block
-      max-width: 292px
-      padding: 0 21px
+      width: 25%
+      padding: 0 18px
       vertical-align: top
-      &:first-child
-        padding-left: 10px
-      &:last-child
-        padding-right: 10px
+      margin-bottom: 50px
       .team-photo
         position: relative
         margin: 0 auto 70px
@@ -136,6 +150,7 @@ body
         height: 201px
         background-color: $team-photo-color
         border-radius: 50%
+
         &:hover
           @extend %cross
       h3
@@ -151,20 +166,22 @@ body
 .price
   font-size: 0
   padding: 109px 0
+  text-align: center
   background-color: $price-bg-color
   .content
     @extend %container
     .card
+
       position: relative
-      margin-right: 30px
+      margin: 0 10px
+
       padding-bottom: 70px
       display: inline-block
       box-sizing: border-box
       max-width: 370px
-      width: 100%
+      width: 30%
       background-color: $card-bg-color
-      &:last-child
-        margin-right: 0
+
       h3
         padding: 28px 0
         font-size: 26px
@@ -193,11 +210,13 @@ body
             border-top: 1px solid $card-border-color
       button
         position: absolute
-        bottom: 0px
+        box-sizing: border-box
+        max-width: 168px
+        width: 100%
+        bottom: 30px
         left: 50%
         transform: translate(-50%, 0)
-        margin-bottom: 30px
-        padding: 8px 50px
+        padding: 8px 0
         font-size: 17px
         line-height: 24px
         font-weight: 600
@@ -224,6 +243,7 @@ footer
     color: #fff
     text-align: center
   .get-in-touch
+    margin-left: 10px
     float: left
     width: 40%
     h3
@@ -261,6 +281,7 @@ footer
   .forms
     width: 48%
     float: right
+    margin-right: 10px
     input
       box-sizing: border-box
       padding: 15px 30px
