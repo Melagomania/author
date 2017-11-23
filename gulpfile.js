@@ -85,12 +85,12 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 	var buildHtml = gulp.src('app/*.html')
 	.pipe(gulp.dest('dist'));
 
-	var buildHtml = gulp.src('app/*.php')
+	var buildPhp = gulp.src('app/*.php')
 	.pipe(gulp.dest('dist'));
 });
 
 gulp.task('clear', function (callback) {
 	return cache.clearAll();
-})
+});
 
 gulp.task('default', ['watch']);

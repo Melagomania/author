@@ -18,6 +18,15 @@ $(document).ready(function() {
 		$("nav").slideToggle("slow");
 	});
 
-	
-
+	$(".form_s").submit(function () {
+		var form_s = $(this).serialize();
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: form_s,
+			success: function () {
+				$(".form_s").html("Спасибо");
+			}
+		});
+	});
 });
